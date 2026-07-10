@@ -11,7 +11,8 @@ A simple **Task Management System** built using **Flask, MySQL, HTML, and CSS**.
 - ✅ Mark Task Status (Completed: True/False)
 - 💾 Store User and Task Data in MySQL
 - 🎨 Simple and Responsive User Interface
-
+# Name : Nigam Prasad Lenka
+# Application no : IN26011682
 ---
 
 ## 🛠️ Tech Stack
