@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Management</title>
+    <style>
+
+        body{
+            margin:0;
+            padding:0;
+            background:#f2f2f2;
+            font-family:Arial, sans-serif;
+        }
+
+        .container{
+            width:450px;
+            margin:60px auto;
+            background:white;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+
+        h2{
+            text-align:center;
+            color:#333;
+            margin-bottom:25px;
+        }
+
+        label{
+            display:block;
+            margin-top:15px;
+            margin-bottom:5px;
+            font-weight:bold;
+        }
+
+        input[type=text],
+        select{
+            width:100%;
+            padding:10px;
+            box-sizing:border-box;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        .radio-group{
+            margin-top:10px;
+        }
+
+        .radio-group label{
+            display:inline;
+            font-weight:normal;
+            margin-right:20px;
+        }
+
+        button{
+            width:100%;
+            margin-top:25px;
+            padding:12px;
+            border:none;
+            background:#007BFF;
+            color:white;
+            font-size:16px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#0056b3;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Task Management</h2>
+
+    <form action="/add_task" method="POST">
+
+        <label>Employee Name</label>
+
+        <input
+        type="text"
+        name="emp_name"
+        placeholder="Enter Employee Name"
+        required>
+
+        <label>Task Title</label>
+
+        <select name="task_title" required>
+
+            <option value="">-- Select Task --</option>
+
+            <option value="Coding">Coding</option>
+
+            <option value="Testing">Testing</option>
+
+            <option value="Documentation">Documentation</option>
+
+            <option value="Meeting">Meeting</option>
+
+            <option value="Deployment">Deployment</option>
+
+            <option value="Bug Fixing">Bug Fixing</option>
+
+        </select>
+
+        <label>Completed</label>
+
+        <div class="radio-group">
+
+            <input
+            type="radio"
+            id="true"
+            name="completed"
+            value="1">
+
+            <label for="true">True</label>
+
+            <input
+            type="radio"
+            id="false"
+            name="completed"
+            value="0"
+            checked>
+
+            <label for="false">False</label>
+
+        </div>
+
+        <button type="submit">Save Task</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
