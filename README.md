@@ -1,34 +1,43 @@
-# 📋 Task Management System
+# 🚀 Employee Task Manager
 
-A simple **Task Management System** built using **Flask, MySQL, HTML, and CSS**. The application allows users to register, log in securely, and manage employee tasks.
+A lightweight **Employee Task Management** web application developed using **Flask** and **MySQL**. It provides a secure authentication system and enables users to create and manage employee tasks through an intuitive interface.
 
-## 🚀 Features
-
-- 👤 User Registration
-- 🔐 Secure Login with Password Hashing
-- 📝 Add Employee Tasks
-- 📌 Select Task Title from Dropdown
-- ✅ Mark Task Status (Completed: True/False)
-- 💾 Store User and Task Data in MySQL
-- 🎨 Simple and Responsive User Interface
-# Name : Nigam Prasad Lenka
-# Application no : IN26011682
 ---
 
-## 🛠️ Tech Stack
+## ✨ Highlights
 
-### Frontend
+- 🔑 User Registration & Authentication
+- 🔒 Password Encryption using Werkzeug
+- 📋 Create Employee Tasks
+- 📂 Predefined Task Categories
+- ✔️ Track Task Completion Status
+- 💽 MySQL Database Integration
+- 🎨 Clean and User-Friendly Interface
+
+---
+
+## 👨‍💻 Developer
+
+**Name:** Nigam Prasad Lenka
+
+**Application No:** IN26011682
+
+---
+
+# 🛠 Technology Stack
+
+## Frontend
 - HTML5
-- CSS3 (Inline Styling)
+- CSS3
 
-### Backend
+## Backend
 - Python
 - Flask
 
-### Database
+## Database
 - MySQL
 
-### Libraries Used
+## Python Packages
 
 - Flask
 - mysql-connector-python
@@ -36,9 +45,9 @@ A simple **Task Management System** built using **Flask, MySQL, HTML, and CSS**.
 
 ---
 
-## 📂 Project Structure
+# 📁 Project Directory
 
-```
+```text
 TaskManagement/
 │
 ├── app.py
@@ -47,56 +56,64 @@ TaskManagement/
 │
 ├── templates/
 │   ├── Register/
-│   │      index.html
-│   │
+│   │   └── index.html
 │   ├── Login/
-│   │      index.html
-│   │
+│   │   └── index.html
 │   └── Task/
-│          index.html
+│       └── index.html
 │
 └── README.md
 ```
 
 ---
 
-## 🗄️ Database Schema
+# 🗃 Database Design
 
-### User Table
+## users
 
-| Column | Type |
-|----------|----------|
-| id | INT (Primary Key) |
+| Field | Data Type |
+|------|-----------|
+| id | INT (PK) |
 | username | VARCHAR(100) |
 | email | VARCHAR(100) |
 | password | VARCHAR(255) |
 
-### Task Table
+### Description
 
-| Column | Type |
-|----------|----------|
-| id | INT (Primary Key) |
+Stores all registered user credentials securely.
+
+---
+
+## tasks
+
+| Field | Data Type |
+|------|-----------|
+| id | INT (PK) |
 | emp_name | VARCHAR(100) |
 | task_title | VARCHAR(100) |
 | completed | BOOLEAN |
 
+### Description
+
+Maintains employee task information and completion status.
+
 ---
 
-## ⚙️ Installation
+# ⚙️ Getting Started
 
-### Clone the repository
+## 1. Clone Repository
 
 ```bash
 git clone https://github.com/your-username/TaskManagement.git
 ```
 
-### Move into the project
+## 2. Navigate into Project
 
 ```bash
 cd TaskManagement
 ```
 
-### Install dependencies
+## 3. Install Required Libraries
 
 ```bash
 pip install -r requirements.txt
@@ -104,17 +121,15 @@ pip install -r requirements.txt
 
 ---
 
-## 🗄️ Configure MySQL
+# 🛢 Database Configuration
 
-Create a database named:
+Create a MySQL database.
 
 ```sql
 CREATE DATABASE user_db;
 ```
 
-Create the following tables.
-
-### User Table
+### Create User Table
 
 ```sql
 CREATE TABLE user1(
@@ -125,7 +140,7 @@ CREATE TABLE user1(
 );
 ```
 
-### Task Table
+### Create Task Table
 
 ```sql
 CREATE TABLE tasks(
@@ -136,7 +151,7 @@ CREATE TABLE tasks(
 );
 ```
 
-Update the MySQL configuration inside **app.py**.
+Update the database credentials in **app.py**
 
 ```python
 db_config = {
@@ -150,13 +165,15 @@ db_config = {
 
 ---
 
-## ▶️ Run the Application
+# ▶️ Launch Application
+
+Run the Flask application.
 
 ```bash
 python app.py
 ```
 
-Open your browser and visit
+Visit the application in your browser.
 
 ```
 http://127.0.0.1:5000
@@ -164,38 +181,51 @@ http://127.0.0.1:5000
 
 ---
 
-## 📸 Application Workflow
+# 🔄 Application Flow
 
-1. Register a new user.
-2. Login using registered credentials.
-3. Enter Employee Name.
-4. Select Task Title.
-5. Choose Task Completion Status.
-6. Save the task to the MySQL database.
+```text
+Register
+     │
+     ▼
+Login
+     │
+     ▼
+Add Employee Details
+     │
+     ▼
+Select Task
+     │
+     ▼
+Choose Status
+     │
+     ▼
+Save to Database
+```
+
+---
+
+# 🔐 Security Features
+
+- Password hashing with Werkzeug
+- Unique email validation
+- MySQL-based data storage
+- Secure authentication process
 
 ---
 
-## 🔒 Security
+# 🌱 Possible Enhancements
 
-- Passwords are securely stored using **Werkzeug Password Hashing**.
-- Duplicate email registration is prevented using a **UNIQUE** constraint.
-
----
-
-## 📌 Future Improvements
-
-- Edit Task
-- Delete Task
-- Task Search
-- Task Filters
-- User Sessions
-- Logout Functionality
-- Dashboard with Task Statistics
-- Responsive UI using Bootstrap
+- ✏️ Update Existing Tasks
+- ❌ Delete Tasks
+- 🔍 Search Functionality
+- 📊 Dashboard & Analytics
+- 👤 User Profiles
+- 🔓 Logout System
+- 📱 Bootstrap Responsive UI
+- 📅 Task Due Dates
 
 ---
----
 
-## 📜 License
+# 📄 License
 
 This project is developed for educational and learning purposes.
